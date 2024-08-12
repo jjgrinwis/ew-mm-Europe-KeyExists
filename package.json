@@ -1,6 +1,6 @@
 {
   "name": "ew-mm-europe-keyexists",
-  "version": "0.0.7",
+  "version": "0.0.15",
   "description": "Check if key exists in a KeyValue store",
   "main": "main.ts",
   "config": {
