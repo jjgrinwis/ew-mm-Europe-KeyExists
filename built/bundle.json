@@ -1,1 +1,1 @@
-{"edgeworker-version":"0.0.26","description":"Check if key exists in a KeyValue store","config": {"subrequest": {"invoke-for-edgeworker-clients": true}} }
+{"edgeworker-version":"0.0.28","description":"Check if key exists in a KeyValue store","config": {"subrequest": {"invoke-for-edgeworker-clients": true}} }

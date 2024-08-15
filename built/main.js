@@ -33,8 +33,9 @@ export async function responseProvider(request) {
             result = document;
             // let's lookup if key exists. If anything wrong, just set it to false
             // doing this in the try/catch block and result should look like this:
-            // [{"result": true}] Macrometa Query Worker will always return a list.
-            keyFound = result[0]["result"] || false;
+            // [true] Macrometa Query Worker will always return a list.
+            //keyFound = result[0]["result"] || false;
+            keyFound = result[0] || false;
         }
         catch (error) {
             // something went wrong
@@ -55,7 +56,7 @@ export async function responseProvider(request) {
     // we moved the assignment of this keyFound var into catch/try block.
     // we tested with an await on result which worked fine but moved it to the try/catch block to set the var.
     // lets make a record in the KV if key exists
-    if (keyFound) {
+    if (keyFound === true) {
         // just do an httpRequest, no need to wait for the answer and not sending any bindVar query sting with it.
         // If we need to send some bindVar in they future use  URLSearchParams class to create one.
         logger.info("Storing a No More Leaks hit");
